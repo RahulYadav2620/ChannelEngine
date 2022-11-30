@@ -30,7 +30,7 @@ namespace ChannelEngine_ConsoleApp
             var merchantProductNo = "001201-S";
             int stock = 25;
             
-            var respone = await channelEngineRepository.UpdateStockProduct(merchantProductNo, stock); 
+            var respone = await channelEngineRepository.UpdateStockProduct(); 
 
             Console.WriteLine($"Is update stock product is successfull ? {respone}");
             #endregion

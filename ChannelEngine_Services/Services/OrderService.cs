@@ -27,9 +27,9 @@ namespace ChannelEngine_Services.Services
         }
 
         /// <inheritdoc />
-        public async Task<bool> UpdateStockProduct(string merchantProductNo, int stock)
+        public async Task<bool> UpdateStockProduct()
         {
-            return await _channelEngineRepository.UpdateStockProduct(merchantProductNo, stock);
+            return await _channelEngineRepository.UpdateStockProduct();
         }
     }
 }

@@ -19,11 +19,9 @@ namespace ChannelEngine_BL.Interfaces
         public Task<List<Product>> GetTopProductsSold();
 
         /// <summary>
-        /// It will update product stock information
+        /// It will update product stock information.
         /// </summary>
-        /// <param name="merchantProductNo">MerchantProductNo which stock you want to update.</param>
-        /// <param name="stock">Stock of product.</param>
         /// <returns> True - If successfully updated. False - If some error occurred./// </returns>
-        public Task<bool> UpdateStockProduct(string MerchantProductNo, int stock);    
+        public Task<bool> UpdateStockProduct();    
     }
 }

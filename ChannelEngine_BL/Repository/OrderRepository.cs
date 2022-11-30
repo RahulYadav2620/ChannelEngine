@@ -58,7 +58,7 @@ namespace ChannelEngine_BL.Repository
                     productList.AddRange(product);
                 }
 
-                var productByDescription = productList.OrderBy(x => x.Qty).GroupBy(x => x.Description).Take(5);
+                var productByDescription = productList.OrderByDescending(x => x.Qty).GroupBy(x => x.Description).Take(5);
                 
                 foreach (var productsGroup in productByDescription)
                 {
@@ -84,7 +84,7 @@ namespace ChannelEngine_BL.Repository
         }
 
         /// <inheritdoc />
-        public Task<bool> UpdateStockProduct(string merchantProductNo, int stock)
+        public Task<bool> UpdateStockProduct()
         {
             bool output = false;
             try

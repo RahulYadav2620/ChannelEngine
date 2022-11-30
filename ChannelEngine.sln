@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChannelEngine_BL", "Channel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChannelEngine_Service_UnitTest", "ChannelEngine_BL_UnitTestCase\ChannelEngine_Service_UnitTest.csproj", "{0C9058A0-7909-46AB-8AC4-BA03BF3C505C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChannelEngine_WebApp_TestCase", "ChannelEngine_WebApp_TestCase\ChannelEngine_WebApp_TestCase.csproj", "{F75E0E2C-32AD-4965-A41C-41E45132DADD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChannelEngine_WebApp", "ChannelEngine_WebApp\ChannelEngine_WebApp.csproj", "{E41838C2-B81A-423E-A97D-731AF037F906}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChannelEngine_Services", "ChannelEngine_Services\ChannelEngine_Services.csproj", "{185413CB-87FC-48A6-AE88-91C8B4DE8591}"
@@ -33,10 +31,6 @@ Global
 		{0C9058A0-7909-46AB-8AC4-BA03BF3C505C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C9058A0-7909-46AB-8AC4-BA03BF3C505C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C9058A0-7909-46AB-8AC4-BA03BF3C505C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F75E0E2C-32AD-4965-A41C-41E45132DADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F75E0E2C-32AD-4965-A41C-41E45132DADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F75E0E2C-32AD-4965-A41C-41E45132DADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F75E0E2C-32AD-4965-A41C-41E45132DADD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E41838C2-B81A-423E-A97D-731AF037F906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E41838C2-B81A-423E-A97D-731AF037F906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E41838C2-B81A-423E-A97D-731AF037F906}.Release|Any CPU.ActiveCfg = Release|Any CPU
