@@ -21,9 +21,7 @@ namespace ChannelEngine_Services.Interfaces
         /// <summary>
         /// It will update product stock information
         /// </summary>
-        /// <param name="merchantProductNo">MerchantProductNo which stock you want to update.</param>
-        /// <param name="stock">Stock of product.</param>
         /// <returns> True - If successfully updated. False - If some error occurred./// </returns>
-        public Task<bool> UpdateStockProduct(string MerchantProductNo, int stock);
+        public Task<bool> UpdateStockProduct();
     }
 }

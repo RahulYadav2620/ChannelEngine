@@ -1,5 +1,4 @@
-﻿using ChannelEngine_BL.Interfaces;
-using ChannelEngine_Services.Interfaces;
+﻿using ChannelEngine_Services.Interfaces;
 using ChannelEngine_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -19,6 +18,10 @@ namespace ChannelEngine_WebApp.Controllers
             _orderService = orderService;
         }
 
+        /// <summary>
+        /// For in progress orders.
+        /// </summary>
+        /// <returns>It will return in progress orders.</returns>
         public async Task<IActionResult> Index()
         {
             var result = await _orderService.GetAllInProgressOrders();
@@ -34,7 +37,7 @@ namespace ChannelEngine_WebApp.Controllers
         }
         public async Task<IActionResult> UpdateStockProduct()
         {
-            var result = await _orderService.UpdateStockProduct("",25);
+            var result = await _orderService.UpdateStockProduct();
             return View();
         }
 
