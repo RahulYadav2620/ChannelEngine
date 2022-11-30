@@ -1,5 +1,7 @@
 using ChannelEngine_BL.Interfaces;
 using ChannelEngine_BL.Repository;
+using ChannelEngine_Services.Interfaces;
+using ChannelEngine_Services.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,7 +23,8 @@ namespace ChannelEngine_WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddScoped<IChannelEngineRepository, ChannelEngineRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IOrderService, OrderService>();
 
         }
 

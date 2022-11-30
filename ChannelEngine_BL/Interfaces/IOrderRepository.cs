@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace ChannelEngine_BL.Interfaces
 {
-    public interface IChannelEngineRepository
+    public interface IOrderRepository
     {
         /// <summary>
         /// It will get all orders in progess.

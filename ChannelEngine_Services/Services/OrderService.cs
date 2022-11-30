@@ -1,31 +1,35 @@
-﻿using ChannelEngine_BL.Model;
+﻿using ChannelEngine_BL.Interfaces;
+using ChannelEngine_BL.Model;
 using ChannelEngine_Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ChannelEngine_Services.Services
 {
     public class OrderService : IOrderService
     {
-        public OrderService()
+        private IOrderRepository _channelEngineRepository;
+        public OrderService(IOrderRepository channelEngineRepository)
         {
-
-        }
-        public Task<OrderDetails> GetAllInProgressOrders()
-        {
-            throw new NotImplementedException();
+            _channelEngineRepository = channelEngineRepository;
         }
 
-        public Task<List<Product>> GetTopProductsSold()
+        /// <inheritdoc />
+        public async Task<OrderDetails> GetAllInProgressOrders()
         {
-            throw new NotImplementedException();
+            return await _channelEngineRepository.GetAllInProgressOrders();
         }
 
-        public Task<bool> UpdateStockProduct(string MerchantProductNo, int stock)
+        /// <inheritdoc />
+        public async Task<List<Product>> GetTopProductsSold()
         {
-            throw new NotImplementedException();
+            return await _channelEngineRepository.GetTopProductsSold();
+        }
+
+        /// <inheritdoc />
+        public async Task<bool> UpdateStockProduct(string merchantProductNo, int stock)
+        {
+            return await _channelEngineRepository.UpdateStockProduct(merchantProductNo, stock);
         }
     }
 }

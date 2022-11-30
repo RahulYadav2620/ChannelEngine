@@ -8,7 +8,7 @@ namespace ChannelEngine_ConsoleApp
         static async Task Main(string[] args)
         {
 
-            var channelEngineRepository = new ChannelEngine_BL.Repository.ChannelEngineRepository();
+            var channelEngineRepository = new ChannelEngine_BL.Repository.OrderRepository();
 
             #region GetAllInProgressOrders
 
