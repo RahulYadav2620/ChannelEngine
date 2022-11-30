@@ -1,0 +1,27 @@
+﻿@model ChannelEngine_BL.Model.Product
+
+<div class="p-5 text-center bg-light">
+    <h1 class="mb-3">Top Products Sold</h1>
+ </div>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">GTIN</th>
+            <th scope="col">Description </th>
+            <th scope="col">Qty</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < ViewBag.TopProduct.Count; i++)
+        {
+            <tr>
+                <td>@ViewBag.TopProduct[i].GTIN</td>
+                <td>@ViewBag.TopProduct[i].Description</td>
+                <td>@ViewBag.TopProduct[i].Qty</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

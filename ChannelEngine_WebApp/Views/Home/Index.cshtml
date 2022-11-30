@@ -1,0 +1,46 @@
+﻿
+@model ChannelEngine_BL.Model.OrderDetails
+
+<div class="p-5 text-center bg-light">
+    <h1 class="mb-3">In progress orders</h1>
+</div>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">ChannelName </th>
+            <th scope="col">ChannelId</th>
+            <th scope ="col">GlobalChannelName</th>
+            <th scope="col">GlobalChannelId</th>
+            <th scope="col">ChannelOrderSupport</th>
+            <th scope ="col">ChannelOrderNo</th>           
+            <th scope ="col">MerchantOrderNo</th>
+            <th scope="col">Status</th>
+            <th scope="col">AcknowledgedDate</th>
+            <th scope="col">CreatedAt</th>
+            <th scope="col">UpdatedAt</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < ViewBag.Products.Count; i++)
+            {
+            <tr>
+                <td>@ViewBag.Products.Content[i].Id</td>
+                <td>@ViewBag.Products.Content[i].ChannelName</td>
+                <td>@ViewBag.Products.Content[i].ChannelId</td>
+                <td>@ViewBag.Products.Content[i].GlobalChannelName</td>
+                <td>@ViewBag.Products.Content[i].GlobalChannelId</td>
+                <td>@ViewBag.Products.Content[i].ChannelOrderSupport</td>
+                <td>@ViewBag.Products.Content[i].ChannelOrderNo</td>
+                <td>@ViewBag.Products.Content[i].MerchantOrderNo</td>
+                <td>@ViewBag.Products.Content[i].Status</td>
+                <td>@ViewBag.Products.Content[i].AcknowledgedDate</td>
+                <td>@ViewBag.Products.Content[i].CreatedAt</td>
+                <td>@ViewBag.Products.Content[i].UpdatedAt</td>
+             </tr>
+            }
+    </tbody>
+</table>
+
+
