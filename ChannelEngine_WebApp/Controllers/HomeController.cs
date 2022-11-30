@@ -1,4 +1,5 @@
 ﻿using ChannelEngine_BL.Interfaces;
+using ChannelEngine_Services.Interfaces;
 using ChannelEngine_WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -10,30 +11,30 @@ namespace ChannelEngine_WebApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IChannelEngineRepository _channelEngineRepository;
+        private readonly IOrderService _orderService;
 
-        public HomeController(ILogger<HomeController> logger, IChannelEngineRepository channelEngineRepository)
+        public HomeController(ILogger<HomeController> logger, IOrderService orderService)
         {
             _logger = logger;
-            _channelEngineRepository = channelEngineRepository;
+            _orderService = orderService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var result = await _channelEngineRepository.GetAllInProgressOrders();
+            var result = await _orderService.GetAllInProgressOrders();
             ViewBag.Products = result;
             return View();
         }
 
         public async Task<IActionResult> Products()
         {
-            var result = await _channelEngineRepository.GetTopProductsSold();
+            var result = await _orderService.GetTopProductsSold();
             ViewBag.TopProduct = result;
             return View();
         }
         public async Task<IActionResult> UpdateStockProduct()
         {
-            var result = await _channelEngineRepository.UpdateStockProduct("",25);
+            var result = await _orderService.UpdateStockProduct("",25);
             return View();
         }
 

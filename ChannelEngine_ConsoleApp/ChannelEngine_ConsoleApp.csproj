@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChannelEngine_BL\ChannelEngine_BL.csproj" />
-    <ProjectReference Include="..\ClassLibrary1\ChannelEngine_BL.csproj" />
   </ItemGroup>
 
 </Project>

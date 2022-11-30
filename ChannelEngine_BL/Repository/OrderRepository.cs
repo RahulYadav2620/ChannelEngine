@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChannelEngine_BL.Repository
 {
-    public class ChannelEngineRepository : IChannelEngineRepository
+    public class OrderRepository : IOrderRepository
     {
         /// <inheritdoc />
         public async Task<OrderDetails> GetAllInProgressOrders()
